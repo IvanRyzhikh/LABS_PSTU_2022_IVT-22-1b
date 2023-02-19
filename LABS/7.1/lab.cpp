@@ -16,7 +16,7 @@ void timeConvert(int* end_Hours, int* end_Minutes, int Minutes) {
 void test1() {
     int Hours, Minutes, end_Minutes;
    
-    std::cout << "enter hours: ";
+    std::cout << "enter hours and minutes: ";
     std::cin >> Hours;
     std::cin >> Minutes;
 
