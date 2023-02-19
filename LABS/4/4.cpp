@@ -40,7 +40,7 @@ int main() {
 	for (int i = 0; i < size - 1; i++)
 	{
 		int min = i;
-		for (int j = i; j < 10; j++)
+		for (int j = i; j < size; j++)
 		{
 			if (data[j] < data[min])
 			{
