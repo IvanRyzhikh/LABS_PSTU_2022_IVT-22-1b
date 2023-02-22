@@ -10,7 +10,6 @@ void swap(int* a, int* b)
     *a = *b;
     *b = t;
 }
-// привет
 /* This function takes last element as pivot, places
 the pivot element at its correct position in sorted
 array, and places all smaller (smaller than pivot)
