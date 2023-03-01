@@ -55,9 +55,9 @@ void addNewTeams() {
         cin >> t.name;
         cout << "Enter city of team: ";
         cin >> t.city;
-        cout << "Enter amount of team players: ";
+        cout << "Enter amount of team's players: ";
         cin >> t.playerAmount;
-        cout << "Enter amount of team points: ";
+        cout << "Enter amount of team's points: ";
         cin >> t.points;
         teams[numTeams++] = t;
     }
