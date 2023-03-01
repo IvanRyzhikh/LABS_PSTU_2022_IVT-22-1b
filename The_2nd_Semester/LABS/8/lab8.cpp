@@ -28,7 +28,6 @@ void replaceFile() {
 
     while (!inFile.eof()) {
         Team t;
-
         inFile >> t.name >> t.city >> t.playerAmount >> t.points;
         if (t.points >= numTeams) {
             outFile << t.name << " " << t.city << " " << t.playerAmount << " " << t.points << endl;
