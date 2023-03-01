@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <string>
 using namespace std;
@@ -102,10 +102,11 @@ void enterTeamData() {
 
 int main() {
     enterTeamData();
+    cout << "Initial amount of teams: " << numTeams << endl;
     deleteTeams();
     cout << "Amount of teams after deleting: " << numTeams << endl;
     addNewTeams();
-    cout << "Amount of teams before deleting: " << numTeams << endl;
+    cout << "Updated amount of teams: " << numTeams << endl;
 
     writeResultToFile();
     replaceFile();
