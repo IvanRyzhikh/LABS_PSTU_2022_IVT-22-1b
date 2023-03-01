@@ -46,7 +46,6 @@ int main()
 {
     srand(time(NULL));
     int size;
-    cout << "enter size" << endl;
     cin >> size;
     int* arr = new int[size];
 
