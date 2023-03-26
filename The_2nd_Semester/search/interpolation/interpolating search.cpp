@@ -89,4 +89,6 @@ void main()
 	else {
 		cout << "\nnumber of element: " << interpSearch(arr, key, size) + 1;
 	}
+	delete[] arr;
+	return 0;
 }
