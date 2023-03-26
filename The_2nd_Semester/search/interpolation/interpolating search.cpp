@@ -88,7 +88,7 @@ void main()
 		cout << "\nelement not found";
 	}
 	else {
-		cout << "\nnumber of element: " << interpSearch(arr, key, size) + 1;
+		cout << "\nFound! number of element: " << interpSearch(arr, key, size) + 1;
 	}
 	delete[] arr;
 	return 0;
