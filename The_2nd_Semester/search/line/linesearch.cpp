@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <ctime>
 using namespace std;
 
@@ -14,10 +14,8 @@ int LineSearch(int arr[], int key, int size)
 
 void main()
 {
-	int size;
+	int size, key;
 	cout << "Enter size: "; cin >> size;
-	int key;
-	cout << "element need to be found: "; cin >> key;
 	srand(time(NULL));
 	int* arr = new int[size];
 	cout << "array: ";
@@ -26,6 +24,10 @@ void main()
 		arr[i] = rand() % 10;
 		cout << arr[i] << " ";
 	}
+	cout << endl;
+	cout << "element need to be found: "; cin >> key;
 	if (LineSearch(arr, key, size) == -1) cout << "\nelement not found";
-	else cout << "\nnumber of element: " << LineSearch(arr, key, size) + 1;
+	else cout << "\nnumber of element: " << LineSearch(arr, key, size) + 1 << endl;
+	delete[] arr;
+	return 0;
 }
