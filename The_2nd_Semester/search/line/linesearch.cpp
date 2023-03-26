@@ -27,7 +27,7 @@ void main()
 	cout << endl;
 	cout << "element need to be found: "; cin >> key;
 	if (LineSearch(arr, key, size) == -1) cout << "\nelement not found";
-	else cout << "\nnumber of element: " << LineSearch(arr, key, size) + 1 << endl;
+	else cout << "\nFound! number of element: " << LineSearch(arr, key, size) + 1 << endl;
 	delete[] arr;
 	return 0;
 }
