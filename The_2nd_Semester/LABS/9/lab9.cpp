@@ -3,14 +3,14 @@
 #include <string>
 #include <stdio.h>
 #include <windows.h>
+using namespace std;
 int main()
 {   
 
     setlocale(LC_ALL, "Russian");
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    using namespace std;
-    ofstream f1("F1.txt");//чтение
+    ofstream f1("F1.txt");
     string str;
     int n;
     cout << "enter numbers of strings: ";
