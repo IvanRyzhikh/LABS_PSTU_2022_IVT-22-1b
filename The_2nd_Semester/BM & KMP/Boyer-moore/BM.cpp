@@ -55,9 +55,9 @@ int main()
 {
     setlocale(LC_ALL, "RUS");
     string inputStr, searchStr;
-    cout << "enter word: " << endl;
+    cout << "enter word: ";
     cin >> inputStr;
-    cout << "enter image" << endl;
+    cout << "enter image";
     cin >> searchStr;
     int idx = find(inputStr, searchStr);
     if (idx == -1)
