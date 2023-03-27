@@ -47,24 +47,7 @@ void pop(Queue*& queue)
 	queue->front = queue->front->next;
 	queue->size--;
 }
-void insert_element(Queue*& queue, int position, int head)
-{
-	Queue* temp = new Queue;
-	temp->init();
-	for (int i = 1; i < position; i++)
-	{
-		push(temp, queue->front->head);
-		pop(queue);
-	}
-	push(temp, head);
-	int init_size = queue->size;
-	for (int i = 0; i < init_size; i++)
-	{
-		push(temp, queue->front->head);
-		pop(queue);
-	}
-	queue = temp;
-}
+
 void insert_Kelements(Queue*& queue, int position, int k)
 {
 	Queue* temp = new Queue;
@@ -81,24 +64,6 @@ void insert_Kelements(Queue*& queue, int position, int k)
 		cin >> head;
 		push(temp, head);
 	}
-	int init_size = queue->size;
-	for (int i = 0; i < init_size; i++)
-	{
-		push(temp, queue->front->head);
-		pop(queue);
-	}
-	queue = temp;
-}
-void delete_element(Queue*& queue, int position)
-{
-	Queue* temp = new Queue;
-	temp->init();
-	for (int i = 1; i < position; i++)
-	{
-		push(temp, queue->front->head);
-		pop(queue);
-	}
-	pop(queue);
 	int init_size = queue->size;
 	for (int i = 0; i < init_size; i++)
 	{
