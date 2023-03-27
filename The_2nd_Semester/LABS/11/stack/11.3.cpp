@@ -36,32 +36,7 @@ void pop(Stack*& stack)
 	stack->node = stack->node->next;
 	stack->size--;
 }
-void add_element(Stack*& stack, int position, int head)
-{
-	Stack* temp = new Stack;
-	temp->init();
-	int init_size = stack->size;
-	if (position == 1)
-	{
-		push(stack, head);
-	}
-	else
-	{
-		for (int i = 0; i <= init_size - position; i++)
-		{
-			push(temp, stack->node->head);
-			pop(stack);
-		}
-		push(stack, head);
-		init_size = temp->size;
-		for (int i = 0; i < init_size; i++)
-		{
-			push(stack, temp->node->head);
-			pop(temp);
-		}
-	}
-	delete temp;
-}
+
 void add_Kelements(Stack*& stack, int position, int k)
 {
 	Stack* temp = new Stack;
@@ -89,32 +64,6 @@ void add_Kelements(Stack*& stack, int position, int k)
 			cin >> head;
 			push(stack, head);
 		}
-		init_size = temp->size;
-		for (int i = 0; i < init_size; i++)
-		{
-			push(stack, temp->node->head);
-			pop(temp);
-		}
-	}
-	delete temp;
-}
-void delete_element(Stack*& stack, int position)
-{
-	Stack* temp = new Stack;
-	temp->init();
-	int init_size = stack->size;
-	if (position == 1)
-	{
-		pop(stack);
-	}
-	else
-	{
-		for (int i = 0; i < init_size - position; i++)
-		{
-			push(temp, stack->node->head);
-			pop(stack);
-		}
-		pop(stack);
 		init_size = temp->size;
 		for (int i = 0; i < init_size; i++)
 		{
@@ -221,21 +170,10 @@ int main()
 	pop(stack);
 	cout << "output stack: " ;
 	printStack(stack);
-	cout << "enter the element and position where want to add that element: ";
-	cin >> data;
-	cin >> pos;
-	add_element(stack, pos, data);
-	cout << "output stack: ";
-	printStack(stack);
 	cout << "enter quantity and position where want to add: ";
 	cin >> k;
 	cin >> pos;
 	add_Kelements(stack, pos, k);
-	cout << "output stack: ";
-	printStack(stack);
-	cout << "enter the position from where want to delete element: ";
-	cin >> pos;
-	delete_element(stack, pos);
 	cout << "output stack: ";
 	printStack(stack);
 	cout << "enter quantity of elements and position from where want to delete: ";
