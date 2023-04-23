@@ -4,8 +4,8 @@
 using namespace std;
 
 int main() {
-    Pair pair1(1, 2);
-    Pair pair2(3, 4);
+    Pair pair1;
+    Pair pair2;
 
     cout << "enter pair1" << endl;
     cin >> pair1;
@@ -18,8 +18,8 @@ int main() {
 
     cout << "difference: " << differencePair << endl;
 
-    Rational rational1(1, 2);
-    Rational rational2(3, 4);
+    Rational rational1;
+    Rational rational2;
 
     cout << "enter rational1" << endl;
     cin >> rational1;
