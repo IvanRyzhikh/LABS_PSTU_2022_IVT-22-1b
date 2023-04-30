@@ -67,29 +67,6 @@ void Set::add(int el) {
     size++;
 }
 
-void Set::remove(int el) {
-    int index = -1;
-    for (int i = 0; i < size; i++) {
-        if (data[i] == el) {
-            index = i;
-            break;
-        }
-    }
-    if (index == -1) {
-        return;
-    }
-    int* newData = new int[size - 1];
-    for (int i = 0; i < index; i++) {
-        newData[i] = data[i];
-    }
-    for (int i = index + 1; i < size; i++) {
-        newData[i - 1] = data[i];
-    }
-    delete[] data;
-    data = newData;
-    size--;
-}
-
 Set Set::operator*(const Set& tmp) {
     Set result;
     for (int i = 0; i < size; i++) {
